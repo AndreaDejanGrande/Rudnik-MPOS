@@ -9,6 +9,7 @@ are published as the remaining requirements to make things easier for new vDinar
 You can find the original MPOS repository [here](https://github.com/MPOS/php-mpos).
 
 **About MPOS**
+
 MPOS is a web based Mining Portal for various crypto currencies.
 It was created by [TheSerapher](https://github.com/TheSerapher) and has hence grown quite large.
 Recently it was migrated into a Github Organization to make development easier. It's a community driven open source project.
@@ -99,6 +100,7 @@ License and Author
 ==================
 
 Copyright 2012, Sebastian Grewe
+
 Copyright 2018, vDinar Developers
 
 Licensed under the Apache License, Version 2.0 (the "License");

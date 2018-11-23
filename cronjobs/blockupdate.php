@@ -39,7 +39,8 @@ foreach ($aAllBlocks as $iIndex => $aBlock) {
   $aBlockInfo = $bitcoin->getblock($aBlock['blockhash']);
   // Fetch this blocks transaction details to find orphan blocks
   $aTxDetails = $bitcoin->gettransaction($aBlockInfo['tx'][0]);
-  if ($aTxDetails['details'][0]['category'] == 'orphan') {
+  // Avoid undefined offset warning
+  if (isset($aTxDetails['details'][0]) && $aTxDetails['details'][0]['category'] == 'orphan') {
     // We have an orphaned block, we need to invalidate all transactions for this one
     if ($block->setConfirmations($aBlock['id'], -1)) {
       $status = 'ORPHAN';
